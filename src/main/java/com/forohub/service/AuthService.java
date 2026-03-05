@@ -78,7 +78,7 @@ public class AuthService implements UserDetailsService {
 
     public AuthResponse register(UsuarioDTO usuarioDTO) {
         try {
-            return new AuthResponse(usuarioService.add(usuarioDTO).getNombre(), "Creado", null, true)
+            return new AuthResponse(usuarioService.add(usuarioDTO).getNombre(), "Creado", null, true);
         } catch (Error e) {
             log.error(e.getMessage());
             throw e;
